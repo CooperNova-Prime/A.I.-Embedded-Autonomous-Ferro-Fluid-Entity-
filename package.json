@@ -1,0 +1,50 @@
+{
+  "name": "type-motion",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "electron.cjs",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "dev:server": "tsx server.ts",
+    "dev:electron": "electron electron.cjs",
+    "desktop": "concurrently \"npm run dev:server\" \"wait-on http://localhost:3000 && npm run dev:electron\"",
+    "build": "vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
+    "start": "node dist/server.cjs",
+    "preview": "vite preview",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@google/genai": "^1.32.0",
+    "@mediapipe/tasks-vision": "^1.0.1",
+    "@react-three/drei": "^10.7.8",
+    "@react-three/fiber": "^9.7.0",
+    "@react-three/postprocessing": "^3.1.1",
+    "@types/express": "^5.0.6",
+    "@types/ws": "^8.18.1",
+    "esbuild": "^0.28.2",
+    "express": "^5.2.1",
+    "gifenc": "1.0.3",
+    "lucide-react": "^0.557.0",
+    "postprocessing": "^6.39.5",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "three": "^0.186.0",
+    "tsx": "^4.23.13",
+    "ws": "^8.21.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.186.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "concurrently": "^10.0.5",
+    "electron": "^44.4.3",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0",
+    "wait-on": "^9.1.0"
+  }
+}

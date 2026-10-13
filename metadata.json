@@ -1,0 +1,11 @@
+{
+  "name": "Ferrofluid Arcana 3D",
+  "description": "Codex Verafluid Rig: Autonomous free-range 3D ferrofluid entity with dedicated Gemini LLM conversational framework, synchronous 4-ring gimbal armature, dedicated platform coordinate tracking, camera observer vision, security intelligence, and FlutterFlow mathematical rendering code exporter.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
